@@ -37,7 +37,13 @@
 }
 
 .nav_item:hover {
-  color: rgba(255,180,162,1);
+
+  background-color: #E5989B;
+  color: transparent;
+  text-shadow: 0px, 1px, 1px, rgba(255, 255, 255, 0.25);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
 }
 
 .clothing_image {
