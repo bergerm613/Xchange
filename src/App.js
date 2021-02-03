@@ -8,14 +8,16 @@ import Nav from './Nav'
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <Nav/>
+      <div className="clothing_image">
+        <BrowserRouter>
+          <Nav/>
 
-        <Switch>
-            <Route exact path="/" component={FeedPage} /> 
-            <Route exact path="/newpost" component={NewPostPage} />
-        </Switch>
+          <Switch>
+              <Route exact path="/" component={FeedPage} /> 
+              <Route exact path="/newpost" component={NewPostPage} />
+          </Switch>
       </BrowserRouter>
+      </div>
     )
   }
 }
