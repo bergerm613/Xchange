@@ -53,3 +53,16 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.feed_page {
+  text-align: center;
+}
+
+.feed_quote {
+  font-family: 'Satisfy', cursive;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 150px;
+  font-size: 60px;
+}
