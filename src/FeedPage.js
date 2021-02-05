@@ -6,7 +6,8 @@ class FeedPage extends Component {
   constructor(props) {
     super(props)
     this.state={
-      items:[{itemName: "Cute Top", description: "This is a description of a cute top", date: "02/04/2021"}]
+      items:[{itemName: "Cute Top", description: "This is a description of a cute top", date: "02/04/2021", image:'http://placekitten.com/200/200'}, 
+             {itemName: "Cuter Top", description: "This is a BETTER description of a cuter top", date: "02/05/2021", image:'http://placekitten.com/g/200/200'}]
     }
   }
   render() {
@@ -20,6 +21,7 @@ class FeedPage extends Component {
               itemName={item.itemName} 
               description={item.description}
               date={item.date}
+              image={item.image}
             />
             )
           })

@@ -8,7 +8,7 @@ class Nav extends Component {
         <div className="nav_bar">
           <Link to="/" className="nav_item float_left size_40">Xchange</Link>
 
-          <Link to="/newpost" className="nav_item float_right size_21 margin_left_15">List</Link>
+          <Link to="/newpost" className="nav_item float_right size_21 margin_left15">List</Link>
           <Link to="/" className="nav_item size_21 float_right">Browse</Link>
         </div>
     )

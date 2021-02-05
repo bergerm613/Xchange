@@ -1,20 +1,20 @@
 import './App.css'
 import React, { Component } from "react"
-import {Container, Row, Col} from "react-bootstrap"
 
 class FeedItem extends Component {
   render() {
     return (
-    <Container>
-        <Row>
-          <Col>1 of 1</Col>
-          <Col>
-            <div>{this.props.itemName}</div>
-            <div>{this.props.description}</div>
-            <div>{this.props.date}</div>
-          </Col>
-        </Row>
-    </Container>
+    <div className="feed_item flex center">
+      <div>
+        <img src={this.props.image} />
+      </div>
+      <div className="item_meta">
+        <div className="spartan margin_bottom10 size_21 lavender">{this.props.itemName}</div>
+        <div className="spartan margin_bottom20 size_16 italics">posted on {this.props.date}</div>
+        <div className="size_16 height85">{this.props.description}</div>
+        <button className="contact_button spartan size_21">Contact</button>
+      </div>
+    </div>
     )
   }
 }
