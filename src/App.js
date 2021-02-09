@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 import FeedPage from './FeedPage'
 import NewPostPage from './NewPostPage'
 import Nav from './Nav'
+import Footer from './Footer'
 
 class App extends Component {
   render() {
@@ -16,6 +17,8 @@ class App extends Component {
               <Route exact path="/" component={FeedPage} /> 
               <Route exact path="/newpost" component={NewPostPage} />
           </Switch>
+
+          <Footer/>
       </BrowserRouter>
       </div>
     )

@@ -13,7 +13,7 @@ class FeedPage extends Component {
   render() {
     return (
       <div className="feed_page">
-        <div className="feed_quote">Insprational Quote Goes Here</div>
+        <div className="feed_quote">Inspirational Quote Goes Here</div>
         {
           this.state.items.map((item, index) => {
             return (
