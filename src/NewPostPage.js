@@ -10,12 +10,11 @@ class NewPostPage extends Component {
       description: ''
     };
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-
-    const hiddenFileInput = React.createRef();
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.uploadFile = this.uploadFile.bind(this)
   }
 
-  fileUploaded(event) {
+  uploadFile(event) {
     const file = event.target.files[0];
     this.setState({ imageFile: file });
   }
@@ -36,23 +35,25 @@ class NewPostPage extends Component {
               className="input_title"
               placeholder="Title"
               type="text"
-              required="true"
+              required={true}
               value={this.state.title}
               onChange={event => this.setState({ title: event.target.value })} />
 
-            <button onClick={this.fileUploaded}>Upload Image File</button>
-
+            <label htmlFor="fileUpload" className="image_file">
+              {this.state.imageFile === '' ? 'Upload Image File' : 'File Uploaded!'}
+            </label>
             <input
               style={{ display: 'none' }}
               type="file"
+              id="fileUpload"
               accept="image/png, image/jpeg"
-              ref={this.hiddenFileInput} />
+              onChange={this.uploadFile} />
 
             <textarea
               className="description_text_area"
               rows="10"
               cols="30"
-              required="true"
+              required={true}
               placeholder="Description"
               value={this.state.description}
               onChange={event => this.setState({ description: event.target.value })} />
