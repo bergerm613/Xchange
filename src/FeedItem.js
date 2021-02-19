@@ -12,7 +12,7 @@ class FeedItem extends Component {
         <div className="spartan margin_bottom10 size_21 lavender">{this.props.name}</div>
         <div className="spartan margin_bottom20 size_16 italics">posted on {this.props.date}</div>
         <div className="size_16 height85">{this.props.description}</div>
-        <button className="contact_button spartan size_21">Contact</button>
+        <a className="contact_button spartan size_21" href={"mailto:"+ this.props.email + "?subject=Interested in " + this.props.name} target="_blank">Contact</a>
       </div>
     </div>
     )
