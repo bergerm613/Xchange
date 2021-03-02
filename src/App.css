@@ -77,6 +77,7 @@
   text-decoration: none;
   color: white;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 .nav_item:hover {
@@ -155,6 +156,16 @@
   font-size: 60px;
   padding-top: 30px;
   padding-bottom: 175px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.log_in {
+  color: white;
+  text-align: center;
+  font-style: italic;
+  font-size: 60px;
+  padding-top: 30px;
+  padding-bottom: 350px; /*this is hacky- theres for sure a better way*/
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 

@@ -7,19 +7,49 @@ import Nav from './Nav'
 import Footer from './Footer'
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tokenId: '',
+    };
+  }
+
+  setTokenId(id) {
+    this.setState({ tokenId: id })
+  }
+
+  removeTokenId() {
+    if (this.state.tokenId !== '') {
+      this.setState({ tokenId: '' })
+    }
+  }
+
+  isUserLoggedIn() {
+    return !(this.state.tokenId === '')
+  }
+
   render() {
     return (
       <div className="clothing_image">
         <BrowserRouter>
-          <Nav/>
+          <Nav
+            setTokenId={(id) => this.setTokenId(id)} 
+            removeTokenId={() => this.removeTokenId()}
+            isUserLoggedIn={this.isUserLoggedIn()}
+          />
 
           <Switch>
-              <Route exact path="/" component={FeedPage} /> 
-              <Route exact path="/newpost" component={NewPostPage} />
+            <Route exact path="/">
+              <FeedPage isUserLoggedIn={this.isUserLoggedIn()} />
+            </Route>
+
+            <Route exact path="/newpost">
+              <NewPostPage isUserLoggedIn={this.isUserLoggedIn()} />
+            </Route>
           </Switch>
 
-          <Footer/>
-      </BrowserRouter>
+          <Footer />
+        </BrowserRouter>
       </div>
     )
   }
